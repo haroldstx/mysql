@@ -1,7 +1,7 @@
 //api para obtener los tours
 import axios from "axios";
 
-const API_URL = "http://localhost:3001/api/tours"; // Cambia esto si tu backend está en otra URL o puerto
+const API_URL = "http://localhost:5000/tours"; // Cambia esto si tu backend está en otra URL o puerto
 
 export const fetchTours = async () => {
   try {
