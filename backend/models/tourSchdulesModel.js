@@ -1,5 +1,6 @@
 //modelo de tour schedules
-const db = require("../db.js");
+const { sequelize: db } = require("../db.js");
+const sequelize = require("sequelize");
 const Tours = require("./toursModel");
 
 const TourSchedules = db.define(
@@ -10,7 +11,7 @@ const TourSchedules = db.define(
       primaryKey: true,
       autoIncrement: true,
     },
-    tourId: {
+    tour_id: {
       type: sequelize.INTEGER,
       allowNull: false,
       references: {
@@ -22,10 +23,9 @@ const TourSchedules = db.define(
       type: sequelize.DATE,
       allowNull: false,
     },
-    available_slots: {
+    seats_available: {
       type: sequelize.INTEGER,
       allowNull: false,
-      defaultValue: 20,
     },
   },
   {
@@ -38,6 +38,6 @@ const TourSchedules = db.define(
 //   KEY `idx_tour_time` (`tour_id`, `schedule_time`),
 //   CONSTRAINT `fk_schedule_tour`
 //     FOREIGN KEY (`tour_id`) REFERENCES `tours`(`id`)
-TourSchedules.belongsTo(Tours, { foreignKey: "tourId" });
+TourSchedules.belongsTo(Tours, { foreignKey: "tour_id" });
 
 module.exports = TourSchedules;

@@ -4,8 +4,8 @@ const Reservations = require("../models/reservations");
 const reservationsData = [
   {
     id: 1,
-    TourSchedulesId: 1,
-    personName: "María Pérez",
+    tour_schedule_id: 1,
+    person_name: "María Pérez",
     seats_reserved: 2,
     reserved_at: "2025-08-01 10:00:00",
     status: "CONFIRMED",

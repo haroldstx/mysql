@@ -4,7 +4,7 @@ const app = express();
 require("dotenv").config();
 const PORT = process.env.PORT || 5000;
 const routes = require("./routes/routes");
-const { syncModels } = require("./models/index");
+const { syncModels } = require("./models/");
 const seedReservations = require("./seeds/reservationsSeeds");
 const seedTourSchedules = require("./seeds/tourSchedulesSeeds");
 const seedTours = require("./seeds/toursSeeds");

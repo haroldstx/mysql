@@ -4,33 +4,33 @@ const db = require("../db.js");
 const tourSchedulesData = [
   {
     id: 1,
-    tourId: 1,
+    tour_id: 1,
     schedule_time: "2025-09-25 09:00:00",
-    available_slots: 20,
+    seats_available: 20,
   },
   {
     id: 2,
-    tourId: 1,
+    tour_id: 1,
     schedule_time: "2025-09-26 14:00:00",
-    available_slots: 20,
+    seats_available: 20,
   },
   {
     id: 3,
-    tourId: 2,
+    tour_id: 2,
     schedule_time: "2025-09-25 17:30:00",
-    available_slots: 30,
+    seats_available: 30,
   },
   {
     id: 4,
-    tourId: 3,
+    tour_id: 3,
     schedule_time: "2025-09-27 06:00:00",
-    available_slots: 15,
+    seats_available: 15,
   },
   {
     id: 5,
-    tourId: 3,
+    tour_id: 3,
     schedule_time: "2025-09-28 06:00:00",
-    available_slots: 15,
+    seats_available: 15,
   },
 ];
 

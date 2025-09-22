@@ -1,4 +1,6 @@
-const db = require("../db.js");
+//model reservations
+const { sequelize: db } = require("../db.js");
+const sequelize = require("sequelize");
 const TourSchedules = require("./tourSchdulesModel");
 
 const Reservations = db.define(
@@ -9,7 +11,7 @@ const Reservations = db.define(
       primaryKey: true,
       autoIncrement: true,
     },
-    TourSchedulesId: {
+    tour_schedule_id: {
       type: sequelize.INTEGER,
       allowNull: false,
       references: {
@@ -17,7 +19,7 @@ const Reservations = db.define(
         key: "id",
       },
     },
-    personName: {
+    person_name: {
       type: sequelize.STRING(150),
       allowNull: false,
     },
@@ -44,6 +46,6 @@ const Reservations = db.define(
 );
 
 //RELACION CON TOUR SCHEDULES and TOURS
-Reservations.belongsTo(TourSchedules, { foreignKey: "TourSchedulesId" });
+Reservations.belongsTo(TourSchedules, { foreignKey: "tour_schedule_id" });
 
 module.exports = Reservations;
